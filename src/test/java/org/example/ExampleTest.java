@@ -49,7 +49,37 @@ public class ExampleTest {
          assertEquals("El número no puede ser negativo",exception.getMessage());
 
     }
+    @Test
+    public void testcontarLetrasA(){
+        Example example= new Example();
 
+        String name="dayanna";
 
+        int resultado= example.contarLetrasA(name);
 
+        assertEquals(3,resultado);
+        assertNotNull(resultado);
+
+    }
+
+    @Test
+    public void testObtenerMayor(){
+
+        Example example = new Example();
+
+        assertEquals(10, example.obtenerMayor(10, 5));
+        assertEquals(20, example.obtenerMayor(15, 20));
+        assertEquals(7, example.obtenerMayor(7, 7)); // cuando son iguales
+    }
+
+    @Test
+    public void testEsCadenaVacia() {
+
+        Example example = new Example();
+        String texto="";
+
+        boolean resultado = example.esCadenaVacia(texto);
+
+        assertTrue(resultado);
+    }
 }
